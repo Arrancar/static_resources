@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MangaKoi App Support - Complete guide to using the MangaKoi manga reading application">
+    <title>MangaKoi - App Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #007aff;
+        }
+
+        .meta {
+            color: #86868b;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #007aff;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #515154;
+        }
+
+        strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: #f0f8ff;
+            border-left: 3px solid #007aff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .feature-card h4 {
+            color: #007aff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #007aff;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .troubleshooting-item {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .troubleshooting-item h4 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+
+        .contact-section {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .contact-section p {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #d2d2d7;
+            color: #86868b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .subsection {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MangaKoi App Support</h1>
+
+        <div class="meta">
+            <p><strong>App Version:</strong> 1.0</p>
+            <p><strong>Platform:</strong> iOS 17.0+, iPadOS 17.0+</p>
+            <p><strong>Last Updated:</strong> October 22, 2025</p>
+        </div>
+
+        <div class="section">
+            <h2>📱 Getting Started</h2>
+            <p>MangaKoi is a beautiful manga reading app that lets you discover, read, and download manga for offline reading. The app features a modern liquid glass design with smooth animations and supports over 30 languages.</p>
+            
+            <div class="highlight">
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Browse thousands of manga titles from MangaDex</li>
+                    <li>Download chapters for offline reading</li>
+                    <li>Beautiful, intuitive interface with liquid glass design</li>
+                    <li>Multiple language support (30+ languages)</li>
+                    <li>Parental controls for safe reading</li>
+                    <li>Dark/Light theme options</li>
+                    <li>Smooth page transitions and animations</li>
+                    <li>Bookmark your favorites</li>
+                    <li>Advanced search with genre filtering</li>
+                    <li>Reading progress tracking</li>
+                    <li>Optimized for iPhone and iPad</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Finding and Searching Manga</h2>
+            
+            <h3>Search Functionality</h3>
+            <ol class="step-list">
+                <li>Tap the <strong>Search</strong> tab at the bottom of the screen</li>
+                <li>Type your search query in the search bar</li>
+                <li>Browse through the results to find your desired manga</li>
+                <li>Use genre filters to narrow down your search</li>
+            </ol>
+
+            <h3>Genre Filtering</h3>
+            <p>The app includes popular genre tags that you can use to filter search results:</p>
+            <ul>
+                <li>Action, Adventure, Comedy, Drama</li>
+                <li>Fantasy, Horror, Romance, Sci-Fi</li>
+                <li>Slice of Life, Sports, Supernatural</li>
+                <li>And many more categories</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Note:</strong> Search functionality requires an internet connection. When offline, you can only access previously downloaded content.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📖 Reading Manga</h2>
+            
+            <h3>Opening a Manga</h3>
+            <ol class="step-list">
+                <li>Find a manga from search results or your library</li>
+                <li>Tap on the manga cover to open the details page</li>
+                <li>Browse available chapters</li>
+                <li>Tap on a chapter to start reading</li>
+            </ol>
+
+            <h3>Reader Controls</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><span class="icon">👆</span>Tap to Toggle Controls</h4>
+                    <p>Tap anywhere on the screen to show/hide reading controls and navigation.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">⬅️➡️</span>Swipe Navigation</h4>
+                    <p>Swipe left or right to navigate between pages, or use the arrow buttons.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">📖</span>Reading Progress</h4>
+                    <p>Your reading progress is automatically saved and synced across devices.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">🔖</span>Bookmarks</h4>
+                    <p>Bookmark your favorite manga for quick access from the Library tab.</p>
+                </div>
+            </div>
+
+            <h3>Reader Settings</h3>
+            <p>While reading, you can access various settings:</p>
+            <ul>
+                <li><strong>Page Fit:</strong> Adjust how pages fit on your screen</li>
+                <li><strong>Reading Direction:</strong> Choose left-to-right or right-to-left reading</li>
+                <li><strong>Brightness:</strong> Adjust screen brightness for comfortable reading</li>
+                <li><strong>Auto-scroll:</strong> Enable automatic page turning</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>⬇️ Downloading for Offline Reading</h2>
+            
+            <h3>How to Download Chapters</h3>
+            <ol class="step-list">
+                <li>Open a manga's detail page</li>
+                <li>Find the chapter you want to download</li>
+                <li>Tap the download button next to the chapter</li>
+                <li>Wait for the download to complete</li>
+                <li>Access downloaded content from the Library tab</li>
+            </ol>
+
+            <h3>Download Management</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><span class="icon">📱</span>Smart Downloads</h4>
+                    <p>The app intelligently manages downloads based on your device's battery and network conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">🔋</span>Battery Optimization</h4>
+                    <p>Downloads are paused when battery is low or device is in Low Power Mode.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">📶</span>Network Awareness</h4>
+                    <p>Downloads prioritize WiFi connections and pause on cellular data when appropriate.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">⏸️</span>Background Downloads</h4>
+                    <p>Downloads continue in the background even when the app is minimized.</p>
+                </div>
+            </div>
+
+            <h3>Download Status</h3>
+            <p>You can monitor download progress in several ways:</p>
+            <ul>
+                <li><strong>Chapter List:</strong> Download progress is shown next to each chapter</li>
+                <li><strong>Downloads Tab:</strong> View all active and completed downloads</li>
+                <li><strong>Settings:</strong> Check storage usage and manage downloaded content</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Storage Management:</strong> Downloaded manga is stored locally on your device. You can clear downloads from Settings > Storage to free up space.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📚 Library Management</h2>
+            
+            <h3>Your Personal Library</h3>
+            <p>The Library tab is your personal collection of manga:</p>
+            <ul>
+                <li><strong>Recently Read:</strong> Quick access to manga you've been reading</li>
+                <li><strong>Bookmarks:</strong> Manga you've saved for later</li>
+                <li><strong>Downloaded:</strong> Chapters available for offline reading</li>
+                <li><strong>Reading History:</strong> Track your reading progress</li>
+            </ul>
+
+            <h3>Organizing Your Library</h3>
+            <ol class="step-list">
+                <li>Open any manga detail page</li>
+                <li>Tap the bookmark button to add to your library</li>
+                <li>Access bookmarked manga from the Library tab</li>
+                <li>Remove items by tapping the bookmark button again</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ Settings and Preferences</h2>
+            
+            <h3>Appearance Settings</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><span class="icon">🌙</span>Theme Selection</h4>
+                    <p>Choose between Light, Dark, or System theme to match your preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">🌍</span>Language Support</h4>
+                    <p>Switch between 30+ supported languages for the app interface.</p>
+                </div>
+            </div>
+
+            <h3>Content Filtering</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><span class="icon">🔒</span>Parental Controls</h4>
+                    <p>Enable parental lock to hide mature content (18+). Requires biometric authentication to disable.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><span class="icon">🚫</span>Promotional Filter</h4>
+                    <p>Filter out promotional content and advertisements from search results.</p>
+                </div>
+            </div>
+
+            <h3>Storage Management</h3>
+            <p>In Settings > Storage, you can:</p>
+            <ul>
+                <li><strong>View Cache Size:</strong> See how much space cached images are using</li>
+                <li><strong>Clear Cache:</strong> Remove cached images to free up space</li>
+                <li><strong>Manage Downloads:</strong> View and clear downloaded manga</li>
+                <li><strong>Library Data:</strong> Manage your saved manga library</li>
+                <li><strong>Donation History:</strong> View and clear donation records</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>💝 Supporting the App</h2>
+            
+            <h3>Donations</h3>
+            <p>MangaKoi is free to use, but you can support its development through in-app donations:</p>
+            <ol class="step-list">
+                <li>Open the app and go to the Donations section</li>
+                <li>Choose from available donation amounts</li>
+                <li>Complete the purchase through your Apple ID</li>
+                <li>Your support helps maintain and improve the app</li>
+            </ol>
+
+            <div class="highlight">
+                <p><strong>Thank You:</strong> All donations are greatly appreciated and help us continue providing free access to manga content.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Troubleshooting</h2>
+            
+            <div class="troubleshooting-item">
+                <h4>App Won't Load Manga</h4>
+                <p><strong>Solution:</strong> Check your internet connection. MangaKoi requires an internet connection to browse and search for manga. If you're offline, you can only access previously downloaded content.</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>Downloads Not Working</h4>
+                <p><strong>Solution:</strong> Ensure you have sufficient storage space and a stable internet connection. Downloads may be paused if your device is in Low Power Mode or if battery is low.</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>Slow Performance</h4>
+                <p><strong>Solution:</strong> Clear the app cache from Settings > Storage > Clear Cache. This will remove cached images and may improve performance.</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>Can't Disable Parental Lock</h4>
+                <p><strong>Solution:</strong> Parental lock requires biometric authentication (Face ID, Touch ID, or passcode) to disable. Ensure biometric authentication is enabled in your device settings.</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>App Crashes or Freezes</h4>
+                <p><strong>Solution:</strong> Force close the app and restart it. If the problem persists, try clearing the cache or restarting your device.</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>Can't Find Specific Manga</h4>
+                <p><strong>Solution:</strong> Try different search terms or check if the manga is available on MangaDex. Some manga may not be available due to licensing restrictions.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 System Requirements</h2>
+            
+            <h3>Minimum Requirements</h3>
+            <ul>
+                <li><strong>iOS Version:</strong> iOS 17.0 or later</li>
+                <li><strong>iPadOS Version:</strong> iPadOS 17.0 or later</li>
+                <li><strong>Device:</strong> iPhone, iPad, or iPod touch</li>
+                <li><strong>Storage:</strong> At least 100MB free space for app installation</li>
+                <li><strong>Internet:</strong> Internet connection required for browsing and downloading</li>
+            </ul>
+
+            <h3>Recommended Requirements</h3>
+            <ul>
+                <li><strong>Storage:</strong> 1GB+ free space for downloaded manga</li>
+                <li><strong>Network:</strong> WiFi connection for optimal download performance</li>
+                <li><strong>Battery:</strong> Sufficient battery for extended reading sessions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔒 Privacy and Security</h2>
+            
+            <h3>Data Collection</h3>
+            <p>MangaKoi respects your privacy:</p>
+            <ul>
+                <li><strong>Minimal Data:</strong> We collect minimal user data</li>
+                <li><strong>Local Storage:</strong> Reading preferences and bookmarks are stored locally</li>
+                <li><strong>No Personal Data:</strong> No personal identification information is required</li>
+                <li><strong>Anonymous Analytics:</strong> Anonymous usage data may be collected to improve the app</li>
+            </ul>
+
+            <h3>Security Features</h3>
+            <ul>
+                <li><strong>HTTPS Encryption:</strong> All network communications are encrypted</li>
+                <li><strong>Local Storage:</strong> User data is stored securely on your device</li>
+                <li><strong>Biometric Protection:</strong> Parental controls use device biometrics</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📞 Contact Support</h2>
+            <p>If you need additional help or have questions not covered in this guide, please contact us:</p>
+
+            <div class="contact-section">
+                <p><strong>Support Email:</strong> support@mangakoi.app</p>
+                <p><strong>Website:</strong> https://mangakoi.app/support</p>
+                <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+            </div>
+
+            <h3>Before Contacting Support</h3>
+            <p>Please include the following information in your support request:</p>
+            <ul>
+                <li>Your device model and iOS version</li>
+                <li>App version (found in Settings)</li>
+                <li>Detailed description of the issue</li>
+                <li>Steps you've already tried to resolve the problem</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📖 Additional Resources</h2>
+            
+            <h3>Legal Information</h3>
+            <ul>
+                <li><a href="terms_of_service.html">Terms of Service</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            </ul>
+
+            <h3>Third-Party Services</h3>
+            <p>MangaKoi uses the following third-party services:</p>
+            <ul>
+                <li><strong>MangaDex API:</strong> For manga content and metadata</li>
+                <li><strong>Apple Services:</strong> For app distribution and in-app purchases</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Important:</strong> MangaKoi is not affiliated with, endorsed by, or sponsored by MangaDex. All manga content is provided by third-party services and remains the property of their respective copyright holders.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <hr style="margin-bottom: 20px; border: none; border-top: 1px solid #d2d2d7;">
+            <p><strong>MangaKoi App Support Guide - Version 1.0</strong></p>
+            <p style="margin-top: 10px; font-style: italic;">This guide covers all major features and functionality of the MangaKoi app. For the most up-to-date information, please check the app's built-in help or contact support.</p>
+        </div>
+    </div>
+</body>
+</html>
